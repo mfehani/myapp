@@ -16,17 +16,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	//##########
-	//#########get promotion information from database for update/put
-	$.get('http://still-shore-7988.herokuapp.com/promotions/'+pid+'.json', 'json',function(data){
-		alert(data.discount);
-	//	document.getElementById('#discount').value=15;
-	//	document.getElementById('#description').val="AHHH";
-	//	var elem = document.getElementById("#description");
-	//	elem.value = "My default value";
-	//	document.getElementById('#end_date').val=data.end_date;
-//	document.getElementById("#description").setAttribute("value", "geo_poi");
-	});
+
 	$("#submit").click(function()
 	{
 		var pname=window.localStorage.getItem('name');
@@ -82,7 +72,7 @@ $(document).ready(function(){
 			  url: 'http://still-shore-7988.herokuapp.com/promotions/'+pid+'.json',
 			  dataType: 'json',
 			  success: function(data, textStatus, jqXHR){
-				  alert('success');
+				//  alert('success');
 				  
 			  },
 			  error: function(jqXHR, data, errorThrown){

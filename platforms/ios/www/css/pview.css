@@ -19,6 +19,16 @@ src: url(fonts/gill_l.otf);
 	background-color: #f7fbec;
 	
 }
+#no {
+    z-index: 1;
+    left: 65px;
+    top: 100px;
+    position: absolute;
+    color: #F7FBEC;
+    font-size: 18px;
+	text-align: center;
+    font-family: "light";
+}
  #apDiv1 {
 	position: absolute;
 	width: 213px;

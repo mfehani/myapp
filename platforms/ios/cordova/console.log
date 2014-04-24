@@ -5191,3 +5191,51 @@ Terminating in response to SpringBoard's termination.
 2014-04-24 22:24:55.442 HelloWorld[47999:70b] Resetting plugins due to page load.
 2014-04-24 22:24:55.460 HelloWorld[47999:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/index.html
 Terminating in response to SpringBoard's termination.
+2014-04-24 23:02:28.212 HelloWorld[49838:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-24 23:02:28.220 HelloWorld[49838:70b] Unlimited access to network resources
+2014-04-24 23:02:28.340 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:02:28.448 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/index.html
+2014-04-24 23:03:14.150 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:14.183 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/login.html
+2014-04-24 23:03:22.348 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:22.380 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:03:24.445 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:24.511 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:26.746 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:26.798 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:28.271 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:28.322 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:29.559 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:29.608 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:31.488 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:31.541 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:33.121 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:33.175 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:03:35.269 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:35.284 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:03:37.072 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:38.023 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/lpview.html
+2014-04-24 23:03:42.575 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:42.596 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:03:46.907 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:46.947 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vprofile.html
+2014-04-24 23:03:52.722 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:03:52.740 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:04:01.259 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:01.329 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/lsearch.html
+2014-04-24 23:04:03.181 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:03.250 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/lsearch.html
+2014-04-24 23:04:07.778 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:07.834 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/lsearch.html
+2014-04-24 23:04:09.147 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:09.161 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:04:14.312 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:14.372 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/mypview.html
+2014-04-24 23:04:17.584 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:17.606 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/editp.html
+2014-04-24 23:04:24.112 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:24.132 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/vhomepage.html
+2014-04-24 23:04:25.809 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:25.831 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/logout.html
+2014-04-24 23:04:30.770 HelloWorld[49838:70b] Resetting plugins due to page load.
+2014-04-24 23:04:30.799 HelloWorld[49838:70b] Finished load of: file:///Users/maryamal-fehani/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/85F7CED3-3E78-46A2-B402-2CFF619048CA/HelloWorld.app/www/index.html
