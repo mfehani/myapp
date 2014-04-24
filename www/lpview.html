@@ -1,7 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	
+	 <link rel="stylesheet" type="text/css" href="css/lpview.css">
 <title>View Promotions</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
 </script>
@@ -68,7 +67,7 @@
             var $first = $('#pi1');
            // alert(i);
 			//alert(data[i].pimage.pimage.url);
-            $first.append(' <img border="0" height="70" weight="60" src="' + data[i].image + '" height= "115" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute;height: 60px; top: 80px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
+            $first.append(' <img border="0" height="70" weight="60" src="' + data[i].image + '" height= "115" style= "margin-left: 10px; margin-top: 0; z-index: 1; position: absolute;height: 60px; top: 80px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
           //  alert(i);
             i = Number(i) + 1;
 			if(i!=len){
@@ -81,7 +80,7 @@
 			$('#description2').text(data[i].description);
 
             var $second = $('#pi2');
-            $second.append('<img alt="" class="auto-style2" src="' + data[i].image + '" hight= "30" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute;height: 60px;  top: 207px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
+            $second.append('<img alt="" class="auto-style2" src="' + data[i].image + '" hight= "30" style= "margin-left: 10px; margin-top:0; z-index: 1; position: absolute;height: 60px;  top: 207px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
 			
             i = i + 1;
 			if(i!=len){
@@ -93,7 +92,7 @@
 			$('#description3').text(data[i].description);
 			
             var $third = $('#pi3');
-            $second.append('<img src="'+data[i].image+'" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 334px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" height= "30">');
+            $second.append('<img src="'+data[i].image+'" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 0; z-index: 1; position: absolute; height: 60px; top: 334px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" height= "30">');
 
             i = i + 1;
 			if(i!=len){
@@ -105,7 +104,7 @@
 			
             var $third = $('#pi4');
 		//	alert(data[i].pimage.pimage.url);
-            $second.append('<img src="' + data[i].image + '" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 459px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" hight= "30">');
+            $second.append('<img src="' + data[i].image + '" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 0; z-index: 1; position: absolute; height: 60px; top: 459px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" hight= "30">');
 			$('#PP1').show();
 			$('#PP2').show();
 			$('#PP3').show();
@@ -163,396 +162,7 @@ else {
         location.reload();
     }
 		</script>
-        <style type="text/css">
-@font-face
-{
-font-family: light;
-src: url(fonts/gill_l.otf);
-}
-        #container {
-            height: 1000px;
-            width: 325px;
-			border-style:solid;
-	border-bottom-color:#aaa;
-	border-right-color:#aaa;
-	border-top-color:#ddd;
-	border-left-color:#ddd;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-        }
-    body {
-	background-color: #f7fbec;
-	
-}
- #apDiv1 {
-	position: absolute;
-	width: 213px;
-	height: 45px;
-	left: 102px;
-	top: 18px;
-	z-index: 1001;
-}
- #apDiv1 {
-	text-align: center;
-	font-family: "light";
-	color: #F7FBED;
-	font-size: 22px;
-	z-index: 1001;
-}
-#no {
-    z-index: 1;
-    left: 65px;
-    top: 100px;
-    position: absolute;
-    color: #F7FBEC;
-    font-size: 18px;
-	text-align: center;
-    font-family: "light";
-}
- #apDiv1 h1 {
-    font-family: 'Gill Sans Std Light';
-	top:10px;
-    left:34px;
-    font-size: 20px;
-	z-index: 1001;
-    position: absolute;
 
-}
- #apDiv2 {
-	position: absolute;
-	width: 305px;
-	height: 515px;
-	background-color: #6f5554;
-	left: 8px;
-	top: 63px;
-	border: solid 3px #e9e8e8;
-	border-color: #f7fbec;
-}
-#apDiv3 {
-	position: absolute;
-	width: 127px;
-	height: 110px;
-	background-color: #779aa2;
-	left: 6px;
-	top: 79px;
-	color: #779aa2;
-}
-#apDiv4 {
-	position: absolute;
-	width: 318px;
-	height: 6px;
-	background-color: #769AA1;
-	left: 4px;
-	top: 74px;
-}
-#apDiv5 {
-	position: absolute;
-	width: 127px;
-	height: 110px;
-	background-color: #9F0713;
-	left: 6px;
-	top: 207px;
-	color: #E51935;
-}
-#apDiv6 {
-	position: absolute;
-	width: 318px;
-	height: 6px;
-	background-color: #9F0713;
-	left: 4px;
-	top: 201px;
-}
-#apDiv7 {
-	position:absolute;
-	width:127px;
-	height:110px;
-	background-color: #769AA1;
-	left: 6px;
-	top: 334px;
-	color: #00FF66;
-}
-#apDiv8 {
-	position: absolute;
-	width: 318px;
-	height: 6px;
-	background-color: #759AA0;
-	left: 4px;
-	top: 328px;
-}
- #apDiv9 {
-	position: absolute;
-	width: 200px;
-	height: 115px;
-	z-index: 2;
-	left: 97px;
-	top: 565px;
-}
-        #apDiv10 {
-	position: absolute;
-	width: 92px;
-	height: 19px;
-	z-index: 1001;
-	left: 133px;
-	top: 570px;
-}
-       #apDiv11 {
-	position: absolute;
-	width: 162px;
-	height: 115px;
-	z-index: 1001;
-	left: 84px;
-	top: 571px;
-}
-}
-        body,td,th {
-	color: #9D0B0E;
-                z-index: 1;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                height: 261px;
-                width: 1172px;
-            }
-
-#apDiv12 {
-	position: absolute;
-	width: 127px;
-	height: 110px;
-	background-color: #9F0713;
-	left: 6px;
-	top: 459px;
-	color: #E51935;
-}
-#apDiv13 {
-	position: absolute;
-	width: 318px;
-	height: 6px;
-	background-color: #9F0713;
-	left: 5px;
-	top: 453px;
-}
-       #apDiv14 {
-	position: absolute;
-	width: 162px;
-	height: 115px;
-	z-index: 1001;
-	left: 84px;
-	top: 571px;
-}
-            #date, #p1, #date2, #p2, #date3, #p3,#date4,#p4, #per2,#per4,#per6,#per8 {
-                color: #F7FBEC;
-                font-size: 10px;
-            }
-            #dis, #dis2, #dis3,#dis4,#per1,#per3,#per5,#per7 {
-                color: #F7FBEC;
-                font-size: 40px;
-                font-family:"light";
-
-            }
-             #date {
-                z-index: 1;
-                left: 65px;
-                top: 175px;
-                position: absolute;
-            }
-            #p1 {
-                z-index: 1;
-                left: 10px;
-                top: 85px;
-                position: absolute;
-                color: #F7FBEC;
-                font-size: 20px;
-                font-family: "light";
-            }
-            #dis {
-                z-index: 1;
-                left: 55px;
-                top: 75px;
-                position: absolute;
-            }
-            #per1 {
-                z-index: 1;
-                left: 95px;
-                top: 75px;
-                position: absolute;
-            }
-            #per2 {
-                z-index: 1;
-                left: 10px;
-                top: 175px;
-                position: absolute;
-            }
-            #date2 {
-                z-index: 1;
-                left: 65px;
-                top: 302px;
-                position: absolute;
-            }
-            #dis2 {
-                z-index: 1;
-                left: 55px;
-                top: 200px;
-                position: absolute;
-            }
-            #p2 {
-                z-index: 1;
-                left: 10px;
-                top: 210px;
-                position: absolute;
-                color: #F7FBEC;
-                font-size: 20px;
-                font-family: "light";
-            }
-            #per3 {
-                z-index: 1;
-                left: 95px;
-                top: 200px;
-                position: absolute;
-            }
-            #per4 {
-                z-index: 1;
-                left: 10px;
-                top: 302px;
-                position: absolute;
-            }
-            #date3 {
-                z-index: 1;
-                left: 65px;
-                top: 430px;
-                position: absolute;
-            }
-            #p3 {
-                z-index: 1;
-                left: 10px;
-                top: 335px;
-                position: absolute;
-                color: #F7FBEC;
-                font-size: 20px;
-                font-family: "light";
-            }
-             #dis3 {
-                z-index: 1;
-                left: 55px;
-                top: 325px;
-                position: absolute;
-            }
-            #per5 {
-                z-index: 1;
-                left: 95px;
-                top: 325px;
-                position: absolute;
-            }
-            #per6 {
-                z-index: 1;
-                left: 10px;
-                top: 430px;
-                position: absolute;
-            }
-            #date4 {
-                z-index: 1;
-                left: 65px;
-                top: 220px;
-                position: absolute;
-                width: 60px;
-                height: 19px;
-            }
-            #p4 {
-                z-index: 1;
-                left: 10px;
-                top: 460px;
-                position: absolute;
-                color: #F7FBEC;
-                font-size: 20px;
-                font-family: "light";
-            }
-            #dis4 {
-                z-index: 1;
-                left: 55px;
-                top: 450px;
-                position: absolute;
-            }
-            #per7 {
-                z-index: 1;
-                left: 95px;
-                top: 450px;
-                position: absolute;
-            }
-            #per8 {
-                z-index: 1;
-                left: 10px;
-                top: 550px;
-                position: absolute:;
-            }
-            .auto-style1 {
-                color: #6F5554;
-            }
-            .auto-style2 {
-                color: #779AA2;
-            }
-            .auto-style3 {
-                color: #EA5948;
-            }
-			#overlay {
-			display: none;
-			background-color: #6f5554;
-			position: fixed;
-			left:3%;
-			
-			top:14%;
-			height:100%;
-			width:18%;
-			overflow: hidden;
-			}
-            .auto-style4 {
-                width: 72px;
-                height: 38px;
-                z-index: 1;
-                left: 10px;
-                top: 553px;
-                position: absolute;
-            }
-           
-            #description1 {
-                z-index: 1;
-                left: 11px;
-                top: 138px;
-                position: absolute;
-                width: 94px;
-                color: #F7FBEC;
-                font-size: 13px;
-            }
-        
-
-            #description2 {
-                z-index: 1;
-                left: 11px;
-                top: 265px;
-                position: absolute;
-                width: 94px;
-                color: #F7FBEC;
-                font-size: 13px;
-            }
-            #description3 {
-                z-index: 1;
-                left: 11px;
-                top: 390px;
-                position: absolute;
-                width: 94px;
-                color: #F7FBEC;
-                font-size: 13px;
-            }
-            #description4 {
-                z-index: 1;
-                left: 11px;
-                top: 515px;
-                position: absolute;
-                width: 94px;
-                color: #F7FBEC;
-                font-size: 13px;
-            }
-
-        </style>
  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
