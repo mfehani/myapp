@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	   <a href="vhomepage.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 5px;"></a><br><br>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.js"></script>
+	<script type="text/javascript" src="js/spin.js"></script>
+	<script>
+	$(document).ready(function(){
+		var opts = {
+		  lines: 16, // The number of lines to draw
+		  length: 7, // The length of each line
+		  width: 4, // The line thickness
+		  radius: 10, // The radius of the inner circle
+		  color: '#000', // #rgb or #rrggbb
+		  speed: 1, // Rounds per second
+		  trail: 60, // Afterglow percentage
+		  shadow: false // Whether to render a shadow
+		  
+		};
+		var spinner = new Spinner(opts).spin();
+		var target = document.getElementById('body');
+	//	target.appendChild(spinner);
+		var spinner = new Spinner(opts).spin(target);
+		$('#overlay').show();
+		$('#PP1').hide();
+		$('#PP2').hide();
+		$('#PP3').hide();
+		$('#PP4').hide();
+		
+		
+		var i=window.localStorage.getItem('theMyI');
+		window.localStorage.setItem('promotionid', 0);
+		var id=window.localStorage.getItem('id');
+	//	alert(id);
+		$.get('http://still-shore-7988.herokuapp.com/showp.json?id='+id, 'json',function(data){
+	//		alert(data.promotions.length);
+			var len=data.promotions.length;
+			if(i!=len){
+			$('#p1').text(data.promotions[i].name);
+			$('#dis').text(data.promotions[i].discount);
+			$('#date').text(data.promotions[i].end_date);
+		//	$('#des').text(data[i].branch); //
+			$('#description1').text(data.promotions[i].description);
+	//		alert(data.promotions[0].id)
+			var $addDiv=$('#pi1');
+	//		alert(data.uimage.url);
+			$addDiv.append(' <img border="0" height="70" weight="60" src="' + data.uimage.url + '" height= "115" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 80px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
+			
+			var $add=$('#link1');
+
+			$add.append('<a href="editp.html" onclick="return anything(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="edit.png" width="20px" hight= "20" style= "margin-left: 165px;"></a>');
+			
+
+			$add.append('&nbsp;&nbsp;&nbsp; <a href="" onclick="return dPromotion(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="delete.png" width="20px" hight= "20" style= "margin-left: 0px;"></a>');
+			
+			i=Number(i)+1;
+			if(i!=len){
+			$('#p2').text(data.promotions[i].name);
+			$('#dis2').text(data.promotions[i].discount);
+			$('#date2').text(data.promotions[i].end_date);
+		//	$('#des2').text(data[i].branch);
+			$('#description2').text(data.promotions[i].description);
+			
+			var $addDiv=$('#pi2');
+
+			$addDiv.append(' <img border="0" height="70" weight="60" src="' + data.uimage.url + '" hight= "30" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 207px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;">');
+			var $add=$('#link2');
+
+			$add.append('<a href="editp.html" onclick="return anything(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="edit.png" width="20px" hight= "20" style= "margin-left: 50px;margin-top: 193px"></a>');
+			
+
+			$add.append('&nbsp;&nbsp;&nbsp; <a href="" onclick="return dPromotion(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="delete.png" width="20px" hight= "20" style= "margin-top: 193px"></a>');
+			
+			i=Number(i)+1;
+			if(i!=len){
+			
+			$('#p3').text(data.promotions[i].name);
+			$('#dis3').text(data.promotions[i].discount);
+			$('#date3').text(data.promotions[i].end_date);
+	//		$('#des3').text(data[i].branch);
+			$('#description3').text(data.promotions[i].description);
+			var $addDiv=$('#pi3');
+
+			$addDiv.append(' <img border="0" height="70" weight="60" src="' + data.uimage.url + '" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 334px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" height= "30">');
+			
+			var $add=$('#link3');
+
+			$add.append('<a href="editp.html" onclick="return anything(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="edit.png" width="20px" hight= "20" style= "margin-left: 50px; margin-top: 320px"></a>');
+			
+
+			$add.append('&nbsp;&nbsp;&nbsp; <a href="" onclick="return dPromotion(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="delete.png" width="20px" hight= "20"></a>');
+			
+			i=Number(i)+1;
+			if(i!=len){
+			$('#p4').text(data.promotions[i].name);
+			$('#dis4').text(data.promotions[i].discount);
+			$('#date4').text(data.promotions[i].end_date);
+	//		$('#des4').text(data[i].branch);
+			$('#description4').text(data.promotions[i].description);
+			var $addDiv=$('#pi4');
+
+			$addDiv.append(' <img border="0" height="70" weight="60" src="' + data.uimage.url + '" alt="a1" width="188" class="auto-style2" style= "margin-left: 10px; margin-top: 30; z-index: 1; position: absolute; height: 60px; top: 459px; left: 123px; background-color: #6A6A6B; layer-background-color: #6A6A6B; border: 1px none #000000; width: 182.5px;" hight= "30">');
+			
+			var $add=$('#link4');
+
+			$add.append('<a href="editp.html" onclick="return anything(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="edit.png" width="20px" hight= "20" style= "margin-left: 50px; margin-top: 445px"></a>');
+			
+
+			$add.append('&nbsp;&nbsp;&nbsp; <a href="" onclick="return dPromotion(' + data.promotions[i].id + ')" class="ui-btn-right" data-icon="arrow-r"><img alt="" class="auto-style2" src="delete.png" width="20px" hight= "20"></a>');
+			$('#PP1').show();
+			$('#PP2').show();
+			$('#PP3').show();
+			$('#PP4').show();
+			i = i + 1;
+			if(i==len){
+				document.getElementById('showmore').style.display = 'none';
+			}
+        }
+		else{
+			$('#PP1').show();
+			$('#PP2').show();
+			$('#PP3').show();
+		   	document.getElementById('PP4').style.display = 'none';
+			document.getElementById('showmore').style.display = 'none';
+		}
+	} else{
+		$('#PP1').show();
+		$('#PP2').show();
+		document.getElementById('PP3').style.display = 'none';
+		document.getElementById('PP4').style.display = 'none';
+		document.getElementById('showmore').style.display = 'none';
+		
+	}
+} else {
+	$('#PP1').show();
+
+	document.getElementById('PP2').style.display = 'none';
+	document.getElementById('PP3').style.display = 'none';
+	document.getElementById('PP4').style.display = 'none';
+	document.getElementById('showmore').style.display = 'none';
+	
+}
+}
+else {
+	document.getElementById('PP1').style.display = 'none';
+	document.getElementById('PP2').style.display = 'none';
+	document.getElementById('PP3').style.display = 'none';
+	document.getElementById('PP4').style.display = 'none';
+	document.getElementById('showmore').style.display = 'none';
+	var $addDiv = $('#no');
+	$addDiv.html('You do not have <br> any promotions');
+}
+		spinner.stop();
+		$('#overlay').hide();
+		});
+		});
+		function anything(id){
+		//	alert(id);
+			window.localStorage.setItem('promotionid', id)
+		}
+		function myFunction(){
+			var i=window.localStorage.getItem('theMyI');
+			window.localStorage.setItem('theMyI',(Number(i)+4));
+			location.reload();
+		}
+		function dPromotion(id){
+	//		alert(1);
+  		  $.ajax({
+  			  type:'DELETE',
+  			  url: 'http://still-shore-7988.herokuapp.com/promotions/'+id+'.json',
+  			  success: function(data, textStatus, jqXHR){
+  			//	  alert('success');
+				  
+  			  },
+  			  error: function(jqXHR, data, errorThrown){
+			//	  alert('fail');
+			//	  alert('im error'+errorThrown);
+		//		  alert('data'+data);
+		//		  alert(jqXHR.status);
+  			  }
+  		  });
+		  location.reload();
+		  
+		}
+		</script>
+        <style type="text/css">
+@font-face
+{
+font-family: light;
+src: url(fonts/gill_l.otf);
+}
+        #container {
+            height: 1000px;
+            width: 325px;
+			border-style:solid;
+	border-bottom-color:#aaa;
+	border-right-color:#aaa;
+	border-top-color:#ddd;
+	border-left-color:#ddd;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+        }
+    body {
+	background-color: #f7fbec;
+	
+}
+#no {
+    z-index: 1;
+    left: 65px;
+    top: 100px;
+    position: absolute;
+    color: #F7FBEC;
+    font-size: 18px;
+	text-align: center;
+    font-family: "light";
+}
+ #apDiv1 {
+	position: absolute;
+	width: 213px;
+	height: 45px;
+	left: 102px;
+	top:18px;
+	z-index: 1001;
+}
+ #apDiv1{
+	text-align: center;
+	font-family: "light";
+	color: #6f5554;
+	font-size: 22px;
+	z-index: 1001;
+}
+
+ #apDiv1 h1 {
+    font-family: 'light';
+	font-size: 20px;
+	z-index: 1001;
+    top:10px;
+    left:34px;
+    position: absolute;
+}
+ #apDiv2 {
+	position: absolute;
+	width: 305px;
+	height: 515px;
+	background-color: #6f5554;
+	left: 8px;
+	top: 63px;
+	border: solid 3px #e9e8e8;
+	border-color: #f7fbec;
+}
+#apDiv3 {
+	position: absolute;
+	width: 127px;
+	height: 110px;
+	background-color: #779aa2;
+	left: 6px;
+	top: 79px;
+	color: #779aa2;
+}
+#apDiv4 {
+	position: absolute;
+	width: 318px;
+	height: 6px;
+	background-color: #769AA1;
+	left: 4px;
+	top: 74px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 127px;
+	height: 110px;
+	background-color: #ea5948;
+	left: 6px;
+	top: 207px;
+	color: #ea5948;
+}
+#apDiv6 {
+	position: absolute;
+	width: 318px;
+	height: 6px;
+	background-color: #9F0713;
+	left: 4px;
+	top: 201px;
+}
+#apDiv7 {
+	position:absolute;
+	width:127px;
+	height:110px;
+	background-color: #769AA1;
+	left: 6px;
+	top: 334px;
+	color: #00FF66;
+}
+#apDiv8 {
+	position: absolute;
+	width: 318px;
+	height: 6px;
+	background-color: #759AA0;
+	left: 4px;
+	top: 328px;
+}
+ #apDiv9 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 97px;
+	top: 565px;
+}
+         #apDiv10 {
+	position: absolute;
+	width: 92px;
+	height: 19px;
+	z-index: 1001;
+	left: 133px;
+	top: 570px;
+}
+       #apDiv11 {
+	position: absolute;
+	width: 162px;
+	height: 115px;
+	z-index: 1001;
+	left: 84px;
+	top: 571px;
+}
+}
+        body,td,th {
+	color: #9D0B0E;
+}
+
+#apDiv12 {
+	position: absolute;
+	width: 127px;
+	height: 110px;
+	background-color: #9F0713;
+	left: 6px;
+	top: 459px;
+	color: #E51935;
+}
+#apDiv13 {
+	position: absolute;
+	width: 318px;
+	height: 6px;
+	background-color: #9F0713;
+	left: 5px;
+	top: 453px;
+}
+       #apDiv14 {
+	position: absolute;
+	width: 162px;
+	height: 115px;
+	z-index: 1001;
+	left: 84px;
+	top: 571px;
+}
+            #date, #p1, #date2, #p2, #date3, #p3,#date4,#p4, #per2,#per4,#per6,#per8 {
+                color: #F7FBEC;
+                font-size: 10px;
+            }
+            #dis, #dis2, #dis3,#dis4,#per1,#per3,#per5,#per7 {
+                color: #F7FBEC;
+                font-size: 40px;
+                font-family:"light";
+
+            }
+             #date {
+                z-index: 1;
+                left: 65px;
+                top: 175px;
+                position: absolute;
+            }
+            #p1 {
+                z-index: 1;
+                left: 10px;
+                top: 85px;
+                position: absolute;
+                color: #F7FBEC;
+                font-size: 20px;
+                font-family: "light";
+            }
+            #dis {
+                z-index: 1;
+                left: 55px;
+                top: 75px;
+                position: absolute;
+            }
+            #per1 {
+                z-index: 1;
+                left: 95px;
+                top: 75px;
+                position: absolute;
+            }
+            #per2 {
+                z-index: 1;
+                left: 10px;
+                top: 175px;
+                position: absolute;
+            }
+            #date2 {
+                z-index: 1;
+                left: 65px;
+                top: 302px;
+                position: absolute;
+            }
+            #dis2 {
+                z-index: 1;
+                left: 55px;
+                top: 200px;
+                position: absolute;
+            }
+            #p2 {
+                z-index: 1;
+                left: 10px;
+                top: 210px;
+                position: absolute;
+                color: #F7FBEC;
+                font-size: 20px;
+                font-family: "light";
+            }
+            #per3 {
+                z-index: 1;
+                left: 95px;
+                top: 200px;
+                position: absolute;
+            }
+            #per4 {
+                z-index: 1;
+                left: 10px;
+                top: 302px;
+                position: absolute;
+            }
+            #date3 {
+                z-index: 1;
+                left: 65px;
+                top: 430px;
+                position: absolute;
+            }
+            #p3 {
+                z-index: 1;
+                left: 10px;
+                top: 335px;
+                position: absolute;
+                color: #F7FBEC;
+                font-size: 20px;
+                font-family: "light";
+            }
+             #dis3 {
+                z-index: 1;
+                left: 55px;
+                top: 325px;
+                position: absolute;
+            }
+            #per5 {
+                z-index: 1;
+                left: 95px;
+                top: 325px;
+                position: absolute;
+            }
+            #per6 {
+                z-index: 1;
+                left: 10px;
+                top: 430px;
+                position: absolute;
+            }
+            #date4 {
+                z-index: 1;
+                left: 65px;
+                top: 555px;
+                position: absolute;
+                width: 60px;
+                height: 19px;
+            }
+            #p4 {
+                z-index: 1;
+                left: 10px;
+                top: 460px;
+                position: absolute;
+                color: #F7FBEC;
+                font-size: 20px;
+                font-family: "light";
+            }
+            #dis4 {
+                z-index: 1;
+                left: 55px;
+                top: 450px;
+                position: absolute;
+            }
+            #per7 {
+                z-index: 1;
+                left: 95px;
+                top: 450px;
+                position: absolute;
+            }
+            #per8 {
+                z-index: 1;
+                left: 10px;
+                top: 555px;
+                position: absolute:;
+            }
+            .auto-style1 {
+                color: #6F5554;
+            }
+            .auto-style2 {
+                color: #779AA2;
+            }
+            #overlay {
+			display: none;
+			background-color: #6f5554;
+			position: fixed;
+			left:3%;
+			
+			top:14%;
+			height:100%;
+			width:18%;
+			overflow: hidden;
+			}
+                       
+            #description1 {
+                z-index: 1;
+                left: 11px;
+                top: 138px;
+                position: absolute;
+                width: 94px;
+                color: #F7FBEC;
+                font-size: 13px;
+            }
+        
+
+            #description2 {
+                z-index: 1;
+                left: 11px;
+                top: 265px;
+                position: absolute;
+                width: 94px;
+                color: #F7FBEC;
+                font-size: 13px;
+            }
+            #description3 {
+                z-index: 1;
+                left: 11px;
+                top: 390px;
+                position: absolute;
+                width: 94px;
+                color: #F7FBEC;
+                font-size: 13px;
+            }
+            #description4 {
+                z-index: 1;
+                left: 11px;
+                top: 515px;
+                position: absolute;
+                width: 94px;
+                color: #F7FBEC;
+                font-size: 13px;
+            }
+
+
+            .auto-style1 {
+                color: #779AA2;
+            }
+            .auto-style2 {
+                color: #EA5948;
+            }
+			#overlay {
+			display: none;
+			background-color: #6f5554;
+			position: fixed;
+			left:3%;
+			top:14%;
+			height:100%;
+			width:21.5%;
+			overflow: hidden;
+			}
+            .auto-style8 {
+                position: absolute;
+                left: 10px;
+                top: 238px;
+            }
+        </style>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body id="body">
+	<span id="no"> </span>
+<div id="overlay"> </div>
+<div id="apDiv1" >
+
+  <h1><span class="auto-style1">My</span> <span class="auto-style2">Promotions</span></h1>
+</div>
+       &nbsp;<div id="apDiv2"></div>
+
+
+
+
+
+
+<div id="PP1">
+
+
+
+<div id="Promotion1">
+<span id="date"> <br></span> 		 
+<span id="p1"> <br></span>
+<span id="dis"> <br></span> 
+<span id="link1" style="font-size: 10px; color: #F7FBEC; z-index: 2; left: 23px; top: 168px; position: absolute; height: 20px"></span> 
+<span id="description1"><br></span>
+<p1 id="per1" > %</p1>
+<p2 id="per2"> Valid Until:</p2>
+
+
+
+<div id="pi1">
+</div>
+
+ <div id="apDiv3"> hello</div>
+<div id="apDiv4"></div>
+</div>
+</div>
+
+
+
+<div id="PP2">
+
+<div id="Promotion2">
+<div id="pi2"> </div>
+<div class="Promotion2">            	 
+<span id="date2" > <br></span> 				 
+<span id="p2" > <br></span>
+<span id="description2"><br></span>
+<span id="dis2"> <br></span> </div> 
+<span id="link2" style="font-size: 10px; color: #F7FBEC; z-index: 2; left: 143px; position: absolute; height: 20px"> </span> 
+<p3 id="per3" > %</p3>
+<p4 id="per4"> Valid Until:</p4>
+
+<div id="apDiv5"></div>
+<div id="apDiv6" style="background-color: #EA5948"></div>
+
+</div>
+</div>
+
+<div id="PP3">
+
+<div class="Promotion3"> 
+<div id="pi3"> </div>         	 
+<span id="date3" > <br></span> 
+<span id="p3" > <br></span>
+<span id="dis3"> <br></span> 
+<span id="description3"><br></span>
+<span id="link3" style="font-size: 10px; color: #F7FBEC; z-index: 2; left: 143px; position: absolute; height: 20px"> </span> 
+<p5 id="per5" > %</p5>
+<p6 id="per6"> Valid Until:</p6>
+
+<div id="apDiv7"></div>
+<div id="apDiv8"></div>
+</div>
+</div>
+
+<div id="PP4">
+
+<div class="Promotion4" style="z-index: 1; width: 116px; height: 28px;"> 
+<div id="pi4"> </div>         	 
+<span id="date4" > <br></span> 
+<span id="p4" > <br></span>
+<span id="dis4"> <br></span> 
+<span id="description4"><br></span>
+<span id="link4" style="font-size: 10px; color: #F7FBEC; z-index: 2; left: 143px; position: absolute; height: 20px"> </span> 
+<p7 id="per7" > %</p7>
+<span class="auto-style8" id="per8">Valid Until:</span>
+
+
+<div id="apDiv12" style="background-color: #EA5948"></div>
+<div id="apDiv13" style="background-color: #EA5948"></div>
+</div>
+</div>
+<div id="apDiv10"><button id="showmore" onclick="return myFunction()" class="btn1" style="background-color: #F7FBEC; color: #6F5554;">Show More</button></div>
+
+                  
+</body>
+</html>

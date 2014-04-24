@@ -1,0 +1,169 @@
+﻿
+    
+body
+{background-image:url("bkground.jpg");
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 485px;
+ font-family:Arial, Sans-Serif;
+}
+#vendor {
+    font-size: xx-small;
+    color: #6e5652;
+    z-index: 1;
+    top: 25px;
+    position: absolute;
+    left: -8px;
+}
+#name {
+    z-index: 1;
+    left: 70px;
+    top: 20px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#promotions {
+    z-index: 1;
+    left: 44px;
+    top: 189px;
+    position: absolute;
+    height: 379px;
+    width: 263px;
+}
+#disc {
+    font-size: xx-small;
+    color: #6e5652;
+    z-index: 1;
+    top: 23px;
+    position: absolute;
+    left: 11px;
+}
+#discount {
+    z-index: 1;
+    left: 70px;
+    top: 20px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#loc {
+    color: #6e5652;
+    z-index: 1;
+    top: 53px;
+    position: absolute;
+    left: 20px;
+    font-size: xx-small;
+}
+
+#branches {
+    font-size: xx-small;
+    z-index: 1;
+    left: 60px;
+    top: 53px;
+    position: absolute;
+    color: #F8FBEA;
+}
+#cate {
+    font-size: xx-small;
+    color: #6e5652;
+    z-index: 1;
+    top: 85px;
+    position: absolute;
+    left: 12px;
+}
+#categories {
+    font-size: xx-small;
+    color: #fafbed;
+    z-index: 1;
+    top: 80px;
+    position: absolute;
+    left: 60px;
+}
+
+#dis {
+    font-size: xx-small;
+    color: #6e5652;
+    z-index: 1;
+    top: 152px;
+    position: absolute;
+    left: 2px;
+}
+#description {
+    font-family: "MS Serif", "New York", serif;
+    margin-left: 10p;
+    z-index: 1;
+    left: 70px;
+    top: 150px;
+    position: absolute;
+    width: 183px;
+    color: #6F5554;
+    background-color: #F8FBEA;
+    height: 129px;
+}
+#date {
+    font-size: 10px;
+    color: #6e5652;
+    z-index: 1;
+    top: 305px;
+    position: absolute;
+    left: 2px;
+}
+#end_date {
+    font-family: "MS Serif", "New York", serif;
+    z-index: 1;
+    left: 70px;
+    top: 298px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#upload {
+    font-size: 10px;
+    color: #6e5652;
+    z-index: 1;
+    top: 335px;
+    position: absolute;
+    left: 30px;
+}
+#tag {
+    font-family: "MS Serif", "New York", serif;
+    z-index: 1;
+    left: 72px;
+    top: 330px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+    width: 184px;
+}
+#submit {
+    z-index: 1;
+    top: 360px;
+    position: absolute;
+    color: #F8FBEA;
+    background-color: #6F5554;
+    left: -19px;
+}
+h3 {
+    font-weight:100;
+    font-size: 20px;
+    color: #fafbed;
+    z-index: 1;
+    left: 13px;
+    top: 145px;
+    position: absolute;
+    height: 21px;
+    width: 191px;
+    font-weight: normal;
+    margin-left: 105px;
+    margin-top: 5px;
+}
+#error{ z-index: 1;
+    left: 120px;
+    top: 560px;
+    position: absolute;
+    height: 36px;
+    width: 196px;
+    font-size: 15px;
+    color: #fafbed;
+}

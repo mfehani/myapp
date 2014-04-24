@@ -1,0 +1,169 @@
+﻿body
+{background-image:url('bkground.jpg');
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 537px;
+ font-family:Arial, Sans-Serif;
+}
+#container {
+    width: 300px;
+    margin: 0 auto;
+    height: 401px;
+}
+h1 {
+    font-weight:100;
+    font-size: 20px;
+    margin-left: 105px;
+    margin-top: 5px;
+    color: #fafbed;
+    z-index: 1;
+    left: 14px;
+    top: 102px;
+    position: absolute;
+    height: 21px;
+    width: 195px;
+}
+#first {
+    z-index: 1;
+    left: 63px;
+    top: 182px;
+    position: absolute;
+    height: 8px;
+    width: 29px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#name {
+    z-index: 1;
+    left: 120px;
+    top: 176px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#nat {
+    z-index: 1;
+    left: 41px;
+    top: 220px;
+    position: absolute;
+    height: 7px;
+    width: 24px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#nationality {
+    z-index: 1;
+    left: 120px;
+    top: 215px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#mail {
+    z-index: 1;
+    left: 61px;
+    top: 220px;
+    position: absolute;
+    height: 7px;
+    width: 17px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#email {
+    z-index: 1;
+    left: 120px;
+    top: 215px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#password {
+    z-index: 1;
+    left: 46px;
+    top: 257px;
+    position: absolute;
+    height: 7px;
+    width: 16px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#pwd {
+    z-index: 1;
+    left: 120px;
+    top: 252px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#comm {
+    z-index: 1;
+    left: 34px;
+    top: 294px;
+    position: absolute;
+    height: 7px;
+    width: 24px;
+    font-size: 10px;
+    color: #6e5652;
+}
+
+p1{
+    z-index: 1;
+    left: 120px;
+    top: 349px;
+    position: absolute;
+    height: 36px;
+    width: 196px;
+    font-size: 10px;
+    color: #fafbed;
+}
+p2 {
+    z-index: 1;
+    left: 120px;
+    top: 419px;
+    position: absolute;
+    height: 36px;
+    width: 196px;
+    font-size: 10px;
+    color: #fafbed;
+}
+#delete {
+    z-index: 1;
+    left: 1px;
+    top: 27px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#submit {
+    z-index: 1;
+    left: 38px;
+    top: 353px;
+    position: absolute;
+    color: #F8FBEA;
+    background-color: #6F5554;
+}
+form label {
+    display: inline-block;
+    width: 140px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 160px;
+}
+
+form .line {
+    clear: both;
+}
+    form .line.submit {
+        text-align: right;
+    }
+#community {
+    z-index: 1;
+    left: 120px;
+    top: 291px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}

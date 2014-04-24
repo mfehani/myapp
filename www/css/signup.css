@@ -1,0 +1,155 @@
+﻿
+body
+{background-image:url("bkground.jpg");
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 485px;
+ font-family:Arial, Sans-Serif;
+}
+#container 
+{width:300px;
+ margin:0 auto;
+ height: 400px;
+
+}
+form label 
+{
+ display:inline-block; width:140px;
+
+}
+form input[type="text"],form input[type="password"],form input[type="email"] 
+{
+ width:160px;
+
+}
+form .line 
+{
+ clear:both;
+
+}
+form .line.submit {
+    text-align:right;
+
+}
+h1 {
+    font-size: 20px;
+    margin-left: 105px;
+    margin-top: 25px;
+    color: #fafbed;
+}
+#community {
+                z-index: 1;
+                left: 119px;
+                top: 329px;
+                position: absolute;
+            }
+#theForm {
+    height: 424px
+}
+#first {z-index: 1;
+                       left: 62px; 
+                       top: 180px; 
+                       position: absolute; 
+                       height: 7px; 
+                       width: 37px; 
+                       font-size: 10px; 
+                       color: #6e5652;
+}
+#nat {
+    z-index: 1;
+    left: 38px;
+    top: 220px;
+    position: absolute;
+    height: 7px;
+    width: 0px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#name {
+    z-index: 1;
+    left: 116px;
+    top: 176px;
+    position: absolute;
+
+}
+#name, #nationality, #community, #email, #pwd {
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#nationality {
+    z-index: 1;
+    left: 117px;
+    top: 215px;
+    position: absolute;
+}
+#mail {
+    z-index: 1;
+    left: 61px;
+    top: 257px;
+    position: absolute;
+    height: 7px;
+    width: 30px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#email {
+    z-index: 1;
+    left: 117px;
+    top: 252px;
+    position: absolute;
+}
+#pwd1 {
+    z-index: 1;
+    left: 45px;
+    top: 294px;
+    position: absolute;
+    height: 5px;
+    width: 6px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#pwd {
+    z-index: 1;
+    left: 117px;
+    top: 290px;
+    position: absolute;
+}
+#comm {
+    z-index: 1;
+    left: 35px;
+    top: 333px;
+    position: absolute;
+    height: 7px;
+    width: 8px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#submit {
+    z-index: 1;
+    left: 32px;
+    top: 393px;
+    position: absolute;
+    color: #F8FBEA;
+    background-color: #6F5554;
+}
+p {
+
+    z-index: 1;
+    left: 120px;
+    top: 389px;
+    position: absolute;
+    height: 36px;
+    width: 196px;
+    font-size: 10px;
+    color: #fafbed;
+}
+
+#error{ z-index: 1;
+    left: 120px;
+    top: 440px;
+    position: absolute;
+    height: 36px;
+    width: 196px;
+    font-size: 15px;
+    color: #fafbed;
+}

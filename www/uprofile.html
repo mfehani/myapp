@@ -1,0 +1,100 @@
+
+
+
+<!doctype html>
+<html>
+    <head>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.js"></script>
+	
+	<script> 
+	$(document).ready(function(){
+		var n2=window.localStorage.getItem('nationality');
+		var n=window.localStorage.getItem('name');
+		var id=window.localStorage.getItem('id');
+		$.ajaxSetup({
+		  headers: {
+		    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+		  }
+		});
+		$("#submit").click(function()
+		{
+			var namee=$('#name').val();
+			if (namee!=""){
+				n=namee;
+			}
+			var nat=$('#nationality').val();
+			if (nat!=""){
+				n2=nat;
+			}
+			var e=$('#email').val();
+			var c=$('#community').val();
+		
+			$.ajax({
+				type: "PUT",
+			  url: 'http://still-shore-7988.herokuapp.com/users/'+id+'.json',
+			  dataType: 'json',
+			  data:{ user: { 
+				  name: n,
+				   email: e,  
+				   nationality: n2
+			   } },
+ 			  success: function(data, textStatus, jqXHR){
+		//		  alert('success');
+ 			  },
+ 			  error: function(jqXHR, data, errorThrown){
+		//		  alert('fail');
+ 			  }
+			});
+			  });
+	  		$("#delete").click(function()
+	  		{
+			  $.ajax({
+				  type:'delete',
+				  url: 'http://still-shore-7988.herokuapp.com/users/'+id+'.json',
+				  dataType: 'json',
+				  success: function(data, textStatus, jqXHR){
+		//			  alert('success');
+					  window.localStorage.clear();
+				  },
+				  error: function(jqXHR, data, errorThrown){
+			//		  alert('fail');
+				  }
+			  });
+		  });
+		});
+
+	</script>
+
+	<br><br>
+    <link rel="stylesheet" type="text/css" href="css/uprofile.css">
+    <script type="text/javascript" src="js/FormValidation2.js" ></script>
+    </head>
+    <body>
+       <a href="uhomepage.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 30;"></a>
+        <div id="container">
+            <form name="input" action="homepage.html" method="link">
+                <h1>Update Information</h1>
+                
+                 <form name="input" action="login.html" method="link" style="height: 387px">
+                <div class="line"><label for="firstname" id="first">Name </label><input type="text" id="name" name="name"/></div></span>
+                <div class="line"><label for="surname" id="nat">Nationality </label><input type="text" id="nationality" name="nationality"/></div>
+    
+                <div class="line"><label for="email" id="mail">Email </label><input type="email" id="email" name="email"/></div></span>
+                <div class="line"><label for="pwd" id="password">Password </label><input type="password" name="password" id="pwd" /></div></span>
+                <div class="line"><label for="community"id="comm">Community </label><select id="community" name="community">
+		      <option value="QF">Qatar Foundation</option>
+		      <option value="QP">Qatar Petroleum</option>
+		      <option value="Public" slected >Public</option>
+		    </select></div>
+                <div class="line submit"><input id="submit" type="button" onclick="return validateForm()" value="Save" /></div>
+                <div id="error"></div>
+ 
+              <p1>Note: Please make sure your details are correct before submitting form.</p1></br> 
+            </form>
+             <form action="daccount.html">
+                <p2>Do you want to deactivate your account?<input type="submit" id="delete" value="Delete Account"></div>
+                </p></form>
+        </div>
+    </body>
+</html>

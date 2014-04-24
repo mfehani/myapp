@@ -1,0 +1,82 @@
+﻿
+    
+body
+{background-image:url("bkground.jpg");
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 485px;
+ font-family:Arial, Sans-Serif;
+}
+._css3m{display:none}
+.auto-style1 {
+    font-weight: normal;
+    text-align: center;
+}
+h1 {
+    font-size: 20px;
+    font-weight:100;
+    Color: #fafbed;
+    height: 36px;
+    width: 212px;
+    z-index: 1;
+    left: 145px;
+    top: 145px;
+    position: absolute;
+}
+#search {
+    z-index: 1;
+    left: 21px;
+    top: -9px;
+    position: absolute;
+    height: 45px;
+    width: 1px;
+}
+#searcht {
+    border-style: groove;
+    border-color: #6F5554;
+    width: 82px;
+    text-align: left;
+    z-index: 1;
+    left: 9px;
+    top: 210px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#submit {
+    width: 54px;
+    z-index: 1;
+    left: 11px;
+    top: 234px;
+    position: absolute;
+    color: #F8FBEA;
+    background-color: #6F5554;
+    height: 20px;
+    font-size: x-small;
+}
+
+#pview {
+    width: 125px;
+    z-index: 1;
+    left: 100px;
+    top: 105px;
+    position: absolute;
+    height: 20px;
+}
+
+#myp {
+    width: 125px;
+    z-index: 1;
+    left: 100px;
+    top: 155px;
+    position: absolute;
+    height: 20px;
+}
+#logout {
+    width: 125px;
+    z-index: 1;
+    left: 100px;
+    top: 205px;
+    position: absolute;
+    height: 20px;
+}

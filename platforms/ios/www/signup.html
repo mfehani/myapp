@@ -1,0 +1,78 @@
+
+
+
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/signup.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate.js"></script>
+		  <script type="text/javascript" src="js/FormValidation.js" ></script>
+		<script>
+		$(document).ready(function(){
+			$.ajaxSetup({
+			  headers: {
+			    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+			  }
+			});
+			$("#submit").click(function()
+			{
+				var n1=$('#name').val();
+				var n2=$('#nationality').val();
+				var e=$('#email').val();
+				var c=$('#community').val();
+				var p=$('#pwd').val();
+
+
+				$.ajax({
+				  type: "POST",
+				  url: 'http://still-shore-7988.herokuapp.com/users.json',
+				  dataType:'json',
+				  data:{ user: {
+					  utype: "normal",
+					  name: n1,
+					   email: e,
+					   nationality: n2,
+					   password: p,
+					   password_confirmation:p,
+					   community_id: c
+				   } },
+ 	 			  success: function(data, textStatus, jqXHR){
+			//		  alert(jqXHR.status);
+ 	 	//		  	alert("sucess");
+ 	 			  	window.location.replace('login.html');
+ 	 			  },
+ 	 			  error: function(jqXHR, data, errorThrown){
+		//			  alert(jqXHR.status);
+ 	 		//	  alert("fail");
+ 	 			  }
+ 				});
+ 				  });
+ 			});
+
+ 		</script>
+	<br><br>
+
+    </head>
+    <body>
+       <a href="index.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 30;"></a>
+        <div id="container">
+            <h1>Sign up</h1>
+            <form id="theForm" name="input" method="link">
+                <div class="line"><label for="firstname" id="first">Name: </label><input type="text" name="name" id="name";/></div>
+                <div class="line"><label for="nationality" id="nat">Nationality: </label><input type="text" name="nationality" id="nationality" /></div>
+                <div class="line"><label for="email" id="mail">Email: </label><input type="email" name="name" id="email" /></div>
+                <div class="line"><label for="pwd" id="pwd1">Password: </label><input type="password" id="pwd" /></div>
+                <div class="line"><label for="community" id="comm">Community: </label><br><select id="community" name="community">
+		      <option value="1">Qatar Foundation</option>
+		      <option value="2">Qatar Petroleum</option>
+		      <option value="Public" slected >Public</option>
+		    </select></div>
+		    <div id="error3"></div>
+                <div class="line submit"><input id="submit" onclick="return validateForm()" type="button" value="Submit"/></div>
+
+                <p>Note: Please make sure your details are correct before submitting form.</p>
+            </form>
+        </div>
+    </body>
+</html>

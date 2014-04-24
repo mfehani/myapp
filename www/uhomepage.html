@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+			<script type="text/javascript" src="js/jquery.js"></script> 
+			<script type="text/javascript" src="js/jquery-migrate.js"></script>
+		<!--	<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script> -->
+		<script>
+		$(document).ready(function(){
+			window.localStorage.setItem('theI', 0);
+			window.localStorage.setItem('theMyI',0);
+			if(localStorage.getItem('userInfo') == null){
+			   window.location.replace('login.html');
+                         
+		   }
+
+
+			$("#logout").click(function()
+			{
+				localStorage.clear();
+						  });
+						  
+		
+					});
+				
+				</script>
+        <link rel="stylesheet" href="vmenu_files/css3menu1/style.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/uhomepage.css">                                                                                
+
+        <title>Qatar Promotions</title><br><br><br>
+
+            <h1>Qatar Promotions</h1>
+
+
+
+
+        
+    </head>
+    <body>
+       <a href="uhomepage.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 30;"></a>
+
+<script>
+$(document).ready(function(){
+	$.ajaxSetup({
+	  headers: {
+	    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+	  }
+	});
+	$("#submit").click(function()
+	{
+		var q = document.getElementById('searcht');
+		var search=q.value;
+		window.localStorage.setItem('search', search)
+		window.location.replace('lsearch.html');
+
+});
+});
+
+</script>
+
+
+
+<BR><INPUT id="searcht" TYPE="TEXT" NAME="query" SIZE=30 >
+<INPUT TYPE="Submit" VALUE="Search" id="submit">
+
+
+
+        <ul class="menu">
+
+<!-- Start css3menu.com BODY section -->
+
+<ul id="css3menu1" class="topmenu">
+	<li class="topmenu"><a href="lpview.html" id="pview" style="background-color: #F8FBEA; color: #6F5554;">View Promotions</a></li>
+    <li class="topfirst"><a href="uprofile.html"id="myp" style=" background-color: #F8FBEA; color: #6F5554;">My Profile</a></li>
+	<li class="toplast"><a href="logout.html" id="logout" style="background-color: #F8FBEA; color: #6F5554;">Logout</a></li>
+</ul><br>
+<span id="tyype"> </span>
+<!-- End css3menu.com BODY section -->
+
+
+        </ul>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

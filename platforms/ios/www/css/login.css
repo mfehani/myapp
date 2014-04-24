@@ -1,0 +1,112 @@
+﻿
+    
+body
+{background-image:url("bkground.jpg");
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 485px;
+ font-family:Arial, Sans-Serif;
+}
+h1 {
+    font-size: 20px;
+    font-weight:100;
+    color: #fafbed;
+    z-index: 1;
+    left: 15px;
+    top: 125px;
+    position: absolute;
+    height: 21px;
+    width: 191px;
+    font-weight: normal;
+    margin-left: 105px;
+
+}
+#name{
+    z-index: 1;
+    left: 40px;
+    top: 202px;
+    position: absolute;
+    width: 50px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#password {
+    z-index: 1;
+    left: 41px;
+    top: 257px;
+    position: absolute;
+    height: 12px;
+    width: 50px;
+    font-size: 10px;
+    color: #6e5652;
+}
+#user {
+    z-index: 1;
+    left: 120px;
+    top: 195px;
+    position: absolute;
+    height: 22px;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#pwd {
+    z-index: 1;
+    left: 120px;
+    top: 248px;
+    position: absolute;
+    height: 22px;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}
+#submit {
+    z-index: 1;
+    left: 42px;
+    top: 311px;
+    position: absolute;
+    color: #F8FBEA;
+    background-color: #6F5554;
+}
+#nameerror {
+    font-size: 10px;
+    z-index: 1;
+    left: 125px;
+    top: 230px;
+    position: absolute;
+    height: 22px;
+    color: #F8FBEA;
+}
+#pwderror1 {
+    font-size: 9px;
+    z-index: 1;
+    left: 120px;
+    top: 285px;
+    position: absolute;
+    height: 22px;
+    color: #F8FBEA;
+}
+#pwderror2 {
+    font-size: 9px;
+    z-index: 1;
+    left: 120px;
+    top: 285px;
+    position: absolute;
+    height: 22px;
+    color: #F8FBEA;
+}
+#per1 {
+    z-index: 1;
+    left: 120px;
+    top: 366px;
+    position: absolute;
+    width: 186px;
+    font-size: 10px;
+    color: #F8FBEA;
+}
+#signup {
+    z-index: 1;
+    left: 180px;
+    top: 400px;
+    position: absolute;
+    color: #6F5554;
+    background-color: #F8FBEA;
+}

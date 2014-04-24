@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/pcreate.css">
+	
+	<br><br>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.js"></script>
+	
+	<script> 
+	$(document).ready(function(){
+		$.ajaxSetup({
+		  headers: {
+		    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+		  }
+		});
+		$("#submit").click(function()
+		{
+			var pname=window.localStorage.getItem('name');
+			var id=window.localStorage.getItem('id');
+			var d=$('#discount').val();
+			var des=$('#description').val();
+			var datee=$('#end_date').val();
+			var t=$('#tag').val();
+			var checkboxes = document.getElementsByName('cat');
+			var category = new Array();
+			for (var i=0, n=checkboxes.length;i<n;i++) {
+			  if (checkboxes[i].checked) 
+			  {
+			  category.push(checkboxes[i].value)
+			  }
+			}
+			var checkboxess = document.getElementsByName('branches');
+			var b = new Array();
+			for (var j=0, n=checkboxess.length;j<n;j++) {
+			  if (checkboxess[j].checked) 
+			  {
+			  b.push(checkboxess[j].value)
+			  }
+			}
+			$.ajax({
+			  type: "POST",
+			   beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+			  url: 'http://still-shore-7988.herokuapp.com/promotions.json',
+			  dataType: 'json',
+			  data:{ promotion: { 
+				  user_id:id,
+				  name: pname,
+				   discount: d, 
+				   description: des,
+				   end_date: datee
+				
+			   },
+			   categories_to_be_added: category,
+			   branches_to_be_added: b,
+			   tags_to_be_added: t
+		    },
+			  success: function(data, textStatus, jqXHR){
+		//		  alert('success');
+				  window.location.replace('vhomepage.html');
+				  
+			  },
+			  error: function(jqXHR, data, errorThrown){
+		//		  alert(jqXHR.status);
+		//		  alert('fail');
+			  }
+			});
+			  });
+		});
+	
+	function validateForm()
+	{
+   		return (isSelected("discount", "Please make a selection!")
+        && isNotEmpty("description", "Please enter a valid description!")
+        && isNotEmpty("end_date", "Please enter an end date!")
+        && isNotEmpty("tag", "Please enter at least 1 tag")
+		&& isChecked("cat", "Please select a category")
+		&& isChecked("bran", "Please select a branch"));
+  	}
+
+
+// Return true if the input value is not empty
+function isNotEmpty(inputId, errorMsg) {
+   var inputElement = document.getElementById(inputId);
+   var errorElement = document.getElementById(inputId + "Error");
+   var inputValue = inputElement.value.trim();
+   var isValid = (inputValue.length !== 0);  // boolean
+   showMessage(isValid, inputElement, errorMsg, errorElement);
+   return isValid;
+}
+// Return true if the one of the checkboxes or radio buttons is checked
+function isChecked(inputName, errorMsg) {
+   var inputElements = document.getElementsByName(inputName);
+   var errorElement = document.getElementById(inputName + "Error");
+   var isChecked = false;
+   for (var i = 0; i < inputElements.length; i++) {
+      if (inputElements[i].checked) {
+         isChecked = true;  // found one element checked
+         break;
+      }
+   }
+   showMessage(isChecked, null, errorMsg, errorElement);
+   return isChecked;
+}
+ 
+/* If "isValid" is false, print the errorMsg; else, reset to normal display.
+ * The errorMsg shall be displayed on errorElement if it exists;
+ *   otherwise via an alert().
+ */
+function showMessage(isValid, inputElement, errorMsg, errorElement) {
+	var $addDiv1 = $('#error')
+   if (!isValid) {
+      // Put up error message on errorElement or via alert()
+      if (errorElement !== null) {
+         errorElement.innerHTML = errorMsg;
+      } else {
+      	alert(errorMsg);
+      }
+      // Change "class" of inputElement, so that CSS displays differently
+      if (inputElement !== null) {
+         inputElement.className = "error";
+         inputElement.focus();
+      }
+   } else {
+      // Reset to normal display
+      if (errorElement !== null) {
+         errorElement.innerHTML = "";
+      }
+      if (inputElement !== null) {
+         inputElement.className = "";
+      }
+   }
+}
+
+// Return true if selection is made (not default of "") in <select> input
+function isSelected(inputId, errorMsg) {
+   var inputElement = document.getElementById(inputId);
+   var errorElement = document.getElementById(inputId + "Error");
+   var inputValue = inputElement.value;
+   // You need to set the default value of <select>'s <option> to "".
+   var isValid = inputValue !== "";
+   showMessage(isValid, inputElement, errorMsg, errorElement);
+   return isValid;
+}
+
+
+	</script>
+	<br>
+</head>
+
+ <body> 
+    <div id="favesHome" data-role="page" data-add-back-btn="true">
+        <!--<div data-role="header" data-position="fixed"> -->
+       <a href="vhomepage.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 30;"></a>
+			<h3>Create Promotion</h3>
+        <div data-role="content" style="width: 295px">
+			<form id="promotions" name="input" action="pview.html" method="link">
+
+			    &nbsp;<label for="discount" id="disc">Discount</label><select id="discount" name="discount">
+		      <option value="5">5%</option>
+		      <option value="10" selected>10%</option>
+		      <option value="15" >15%</option>
+		      <option value="20">20%</option>
+		    </select>
+			    <label for="location" id="loc" class="auto-style1">Branch</label><br />
+				<div id="branches">
+			&nbsp;
+			
+		</div>
+	   	 <script>
+		function getBranches(){
+			var arr=new Array(50);
+			var id=window.localStorage.getItem('id');
+			var $addDiv=$('#branches');
+		
+			$.get('http://still-shore-7988.herokuapp.com/users/'+id+'.json', 'json',function(data){
+				for (var i=0; i<data.branches.length; i++){
+					arr.push(data.branches[i].name);
+					$addDiv.append(' <input id="bran" type="checkbox" name="branches" value="'+data.branches[i].id+'">'+data.branches[i].name);
+			}
+
+			});
+		
+		}
+		getBranches();
+
+	   	 </script>
+			    <br>
+			    <label for="category" id="cate" >Category</label>
+			 						<div id="categories">
+			 					&nbsp;
+			
+			 				</div>
+			    	 <script>
+			 	function getCategories(){
+			 		var arr=new Array(100);
+			 		var $addDiv=$('#categories');
+			 		$.get('http://still-shore-7988.herokuapp.com/categories.json', 'json',function(data){
+			 			for (var i=0; i<data.length; i++){
+			 				$addDiv.append(' <input id="cat" type="checkbox" name="cat" value="'+data[i].id+'">'+data[i].name);
+						 if(i==2){
+							 $addDiv.append('<br> &nbsp; ');
+						 }
+						 if(i==5){
+						 	$addDiv.append('<br> &nbsp; ');
+						 }
+			 			}
+
+			 		});
+			 	}
+			 	getCategories();	
+
+
+			    	 </script>
+			     
+			    <label for="description" id="dis">Description</label><textarea id="description" name="description" ></textarea>
+
+				
+			    <label for="date" id="date">Valid Until</label><input id="end_date" name="end_date" type="date" >
+			          <br />
+			    <span id="upload">Tags</span><br />
+			&nbsp;<input id="tag" type="text" name="tags">
+			    <br>
+			    
+			    <input id="submit" onclick="return validateForm()" type="button" value="Submit">
+			  </div>
+			  <div id="error"></div>
+			  </form>
+			</div>
+        </div>
+			</div>
+			</body>
+			</html>

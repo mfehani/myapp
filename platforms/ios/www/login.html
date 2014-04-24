@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.js"></script>
+	
+	<script>
+	$.support.cors=true;
+	$(document).ready(function(){
+		$.ajaxSetup({
+		  headers: {
+		    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+		  }
+		});
+		$("#submit").click(function()
+		{
+			var e=$('#user').val();
+			var p=$('#pwd').val();
+		
+		
+			$.ajax({
+			  type: "POST",
+			  cache: false,
+			    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+			  url: 'http://still-shore-7988.herokuapp.com/users/sign_in.json',
+			  dataType: 'json',
+			  data:{ user: { 
+
+				   email: e, 
+				   password: p
+			   } },
+			  success: function(data, textStatus, jqXHR){
+				  window.localStorage.setItem('userInfo', e)
+		     		$.get('http://still-shore-7988.herokuapp.com/users.json', 'json',function(data){
+		     		var e=localStorage.getItem('userInfo');
+		  			$('#info').text(e);
+		     		var thetype="";
+		     		var id=0;	
+		  			var thename="";
+		  			var email="";
+		  			var thenationality="";
+		     		for (var i=0; i<data.length; i++)
+		     		{ 
+		  			email=data[i].email;
+		     			if(email==e){
+		     			id=data[i].id;				
+		  				thetype=data[i].utype;
+		  				thename=data[i].name;
+		  				thenationality=data[i].nationality;
+		  				break;
+		     			}
+		     		}
+		     		window.localStorage.setItem('type', thetype);
+		  			window.localStorage.setItem('name', thename);
+		  			window.localStorage.setItem('nationality', thenationality);
+		  			window.localStorage.setItem('id', id);
+					if(window.localStorage.getItem('type')=='vendor')
+					window.location.replace('vhomepage.html');
+					else{
+						window.location.replace('uhomepage.html');
+					}
+					
+		     		});
+			  },
+			  error: function(jqXHR, data, errorThrown){
+				  alert("You've entered the wrong email or password")
+		//		  alert('failure');
+		//		  alert(jqXHR.status);
+    },
+			complete: function(xhr, textStatus){
+		//		alert(xhr.status+"z");
+			}
+
+		});
+	});
+	});
+
+	</script>
+<title>Login</title>
+<br><br>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script>
+function validateForm()
+{
+var x=document.forms["myForm"]["user"].value;
+var $addDiv1 = $('#nameerror')
+var $addDiv2 = $('#pwderror1')
+var $addDiv3 = $('#pwderror2')
+$addDiv1.html("");
+$addDiv2.html("");
+$addDiv3.html("");
+
+if (x==null || x=="")
+  {
+	  
+  alert('Username must be filled out');
+  return false;
+  }
+
+ var p=document.forms["myForm"]["password"].value;
+if (p==null || p=="")
+  {
+  alert('Password must be filled out');
+  return false;
+  }
+ if (p.length <8)
+   {
+   alert('Password must be at least 6 characters');
+  return false;
+  }
+
+
+
+}
+</script>
+</head>
+<body >
+       <a href="index.html" target="_self"> <img alt="" class="auto-style2" src="logo-2.jpg" width="75px" hight= "30" style= "margin-left: 10px; margin-top: 30;"></a>
+
+<h1>Log in</h1>
+<form id="myForm" method="post" action="" name="login">
+<pre style="width: 317px">
+<label for="firstname" id="name">E-mail</label>
+<input id="user" type="text" name="user" >
+<div id="nameerror"></div>
+
+<label for="firstname" id="password">Password</label> 
+<input id="pwd" type="password" name="password">
+<div id="pwderror1"></div>
+<div id="pwderror2"></div>
+</pre>
+<button id="submit" onclick="return validateForm()" type="button">Submit</button>
+</form>
+<p id="per1">If you are not registered, please sign up</p>
+<a href="signup.html" target="_self"><button id="signup" type="button">Sign up</button></a>
+</body>
+</html>

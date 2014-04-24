@@ -1,0 +1,22 @@
+﻿@font-face
+{
+font-family: light;
+src: url(fonts/gill_l.otf);
+}
+    
+body
+{background-image:url("bkground.jpg");
+ background-repeat: no-repeat; 
+ width: 301px; 
+ height: 485px;
+ font-family:Arial, Sans-Serif;
+}
+p {
+    font-family: 'light'; font-weight: 100;
+    Color: #fafbed;
+    font-size:larger;
+    z-index: 1;
+    left: 127px;
+    top: 189px;
+    position: absolute;
+}
